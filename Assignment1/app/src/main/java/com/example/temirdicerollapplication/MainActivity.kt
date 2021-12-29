@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        val randomInt = (1..6).random()
+        val randNumber = (1..6).random()
 
-        val drawableResource = when (randomInt) {
+        val drawableResource = when (randNumber) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3

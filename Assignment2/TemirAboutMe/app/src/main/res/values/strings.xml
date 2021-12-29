@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Temir About Me</string>
+    <string name="name">Temir Mendigali</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="attention">Attention</string>
+    <string name="bio">
+        Hi, my name is Temir. I\'m Software Engineering student at Astana IT University. I love coding, cybersport and writing stories. One of them is:
+        \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales placerat interdum. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed facilisis viverra lacus, quis vehicula elit gravida vitae. Aenean vel lectus id enim porta rutrum id et nunc. Maecenas mollis ex id sem venenatis posuere in molestie arcu. Suspendisse lorem felis, auctor quis ante ac, elementum posuere est. In at purus dictum, iaculis nulla id, tempor nisl. Mauris augue elit, finibus id erat sit amet, sagittis pretium ligula.
+\n\nPhasellus ultrices sed massa id egestas. Pellentesque sed mi mi. Donec dui mauris, porta nec auctor vel, consectetur nec leo. Morbi a elementum justo, eget blandit urna. Nam lacus dolor, aliquam eget ante id, mollis vulputate elit. In vel malesuada dui. Cras placerat, ipsum id commodo lobortis, sapien mauris iaculis ante, sed aliquam dui ipsum ut velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean congue massa sit amet diam gravida, sed aliquet diam ultricies.
+\n\nPraesent vestibulum pellentesque enim, eu blandit purus. Aliquam nec lacus scelerisque, dictum ligula vitae, fermentum massa. Etiam viverra ultricies odio sit amet venenatis. Quisque laoreet posuere diam et venenatis. Duis fermentum, felis nec rhoncus porta, neque dui venenatis neque, ac vulputate erat lorem maximus mauris. Quisque eleifend suscipit mi, eget euismod nisl commodo non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut at ex a neque luctus suscipit. Sed et nibh ex. Integer a mauris eget ipsum faucibus fringilla eu in metus. Suspendisse sit amet ante ut massa volutpat feugiat. Fusce vitae ornare leo.
+    </string>
+    <string name="what_is_your_nickname">What is your Nickname?</string>
+    <string name="done">Done</string>
+</resources>
