@@ -13,4 +13,4 @@
 ![Screenshot 3](./screenshots/Screenshot3.png "Screenshot 3")
 
 # Screenshot 4
-![Screenshot 4](./screenshots/Screenshot3.png "Screenshot 4")
+![Screenshot 4](./screenshots/Screenshot4.png "Screenshot 4")
