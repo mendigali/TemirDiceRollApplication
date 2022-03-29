@@ -47,9 +47,9 @@
                 android:layout_weight="1"
                 android:indeterminate="false"
                 android:max="@{game.numQuestions}"
-                android:minHeight="50dp"
+                android:minHeight="20dp"
                 android:orientation="horizontal"
-                android:progress="@{game.questionIndex + 1}"
+                android:progress="@{game.questionIndex}"
                 app:layout_constraintBottom_toTopOf="@+id/questionText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/progressBar"
-                tools:text="What color is the Android mascot?" />
+                tools:text="What is the name of this programming language?" />
 
             <RadioGroup
                 android:id="@+id/questionRadioGroup"
@@ -130,6 +130,7 @@
                 android:layout_marginStart="@dimen/question_horizontal_margin"
                 android:layout_marginTop="@dimen/vertical_margin"
                 android:layout_marginEnd="@dimen/question_horizontal_margin"
+                android:textColor="@color/colorAccent"
                 android:text="@string/submit_button"
                 android:textSize="@dimen/button_text_size"
                 app:layout_constraintEnd_toEndOf="parent"

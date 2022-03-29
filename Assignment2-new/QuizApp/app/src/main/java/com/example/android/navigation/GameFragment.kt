@@ -4,26 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.android.navigation.databinding.FragmentGameBinding
 
-//import kotlinx.android.synthetic.main.fragment_game.*
-
 class GameFragment : Fragment() {
     data class Question(
-        val text: String = "What is the name of these programming language?",
+        val text: String = "What is the name of these?",
         val answers: List<String>,
         val image: Int
     )
-
-//    private var _binding: ResultProfileBinding? = null
-
-    // This property is only valid between onCreateView and onDestroyView.
-//    private val binding get() = _binding!!
 
     private val questions: MutableList<Question> = mutableListOf(
         Question(
@@ -37,13 +29,41 @@ class GameFragment : Fragment() {
         Question(
             answers = listOf("Python", "Java", "Solidity", "Swift"),
             image = R.drawable.python
-        )
+        ),
+        Question(
+            answers = listOf("Swift", "Bird", "Solidity", "Objective C"),
+            image = R.drawable.swift
+        ),
+        Question(
+            answers = listOf("Golang", "Gopher", "Scala", "TypeScript"),
+            image = R.drawable.golang
+        ),
+        Question(
+            answers = listOf("Dart", "Webpack", "TypeScript", "Golang"),
+            image = R.drawable.dart
+        ),
+        Question(
+            answers = listOf("Solidity", "Solana", "Scala", "React"),
+            image = R.drawable.solidity
+        ),
+        Question(
+            answers = listOf("Redis", "Dart", "Webpack", "Parcel"),
+            image = R.drawable.redis
+        ),
+        Question(
+            answers = listOf("Spring", "Java", "Kotlin", "MongoDB"),
+            image = R.drawable.spring
+        ),
+        Question(
+            answers = listOf("PostgreSQL", "Golang", "Pascal", "TypeScript"),
+            image = R.drawable.postgresql
+        ),
     )
-
 
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
     var questionIndex = 0
+    var trueAnswers = 0
     val numQuestions = questions.size
 
     override fun onCreateView(
@@ -51,7 +71,6 @@ class GameFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        _binding = ResultProfileBinding.inflate(inflater, container, false)
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(
             inflater, R.layout.fragment_game, container, false
         )
@@ -71,26 +90,23 @@ class GameFragment : Fragment() {
                     R.id.fourthAnswerRadioButton -> answerIndex = 3
                 }
 
-                if (answers[answerIndex] == currentQuestion.answers[0]) {
-                    questionIndex++
-                    if (questionIndex < numQuestions) {
-                        currentQuestion = questions[questionIndex]
-                        setQuestion()
-                        binding.questionImage.setImageResource(currentQuestion.image)
-                        binding.invalidateAll()
-                    } else {
-                        view.findNavController()
-                            .navigate(
-                                GameFragmentDirections
-                                    .actionGameFragmentToGameWonFragment(
-                                        numQuestions,
-                                        questionIndex
-                                    )
-                            )
-                    }
+                if (answers[answerIndex] == currentQuestion.answers[0]) trueAnswers++
+
+                questionIndex++
+
+                if (questionIndex < numQuestions) {
+                    currentQuestion = questions[questionIndex]
+                    setQuestion()
+                    binding.questionImage.setImageResource(currentQuestion.image)
+                    binding.invalidateAll()
                 } else {
-                    view.findNavController()
-                        .navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
+                    view.findNavController().navigate(
+                        GameFragmentDirections
+                            .actionGameFragmentToGameWonFragment(
+                                numQuestions,
+                                trueAnswers
+                            )
+                    )
                 }
             }
         }
@@ -98,8 +114,8 @@ class GameFragment : Fragment() {
     }
 
     private fun randomizeQuestions() {
-//        questions.shuffle()
         questionIndex = 0
+        trueAnswers = 0
         setQuestion()
     }
 

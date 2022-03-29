@@ -18,7 +18,7 @@
             android:layout_marginEnd="@dimen/horizontal_margin"
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
-            android:text="Play"
+            android:text="@string/play_button"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/button_text_size"
             android:textStyle="bold"
@@ -26,54 +26,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleImage" />
 
-<!--        <Button-->
-<!--            android:id="@+id/aboutButton"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="@dimen/horizontal_margin"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:layout_marginEnd="@dimen/horizontal_margin"-->
-<!--            android:paddingStart="@dimen/button_padding"-->
-<!--            android:paddingEnd="@dimen/button_padding"-->
-<!--            android:text="About"-->
-<!--            android:textColor="@color/colorAccent"-->
-<!--            android:textSize="@dimen/button_text_size"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/rulesButton"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/titleImage" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/rulesButton"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="@dimen/horizontal_margin"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:layout_marginEnd="@dimen/horizontal_margin"-->
-<!--            android:paddingStart="@dimen/button_padding"-->
-<!--            android:paddingEnd="@dimen/button_padding"-->
-<!--            android:text="Rules"-->
-<!--            android:textColor="@color/colorAccent"-->
-<!--            android:textSize="@dimen/button_text_size"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/aboutButton" />-->
-
         <ImageView
             android:id="@+id/titleImage"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:orientation="horizontal"
             android:scaleType="fitCenter"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="64dp"
             app:layout_constraintBottom_toTopOf="@+id/playButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/android_trivia" />
+            app:srcCompat="@drawable/coding_languages_logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
