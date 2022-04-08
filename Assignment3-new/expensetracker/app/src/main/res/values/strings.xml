@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Expense tracker</string>
+    <string name="add_btn">Add transaction</string>
 </resources>

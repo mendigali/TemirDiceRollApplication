@@ -14,6 +14,7 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
     private lateinit var deletedTransaction: Transaction
@@ -81,11 +82,11 @@ class MainActivity : AppCompatActivity() {
     private fun updateDashboard() {
         val totalAmount = transactions.sumOf { it.amount }
         val budgetAmount = transactions.filter { it.amount > 0 }.sumOf { it.amount }
-        val expenseAmount = totalAmount - budgetAmount
+        val expenseAmount = abs(totalAmount - budgetAmount)
 
-        balance.text = "$ %.2f".format(totalAmount)
-        budget.text = "$ %.2f".format(budgetAmount)
-        expense.text = "$ %.2f".format(expenseAmount)
+        balance.text = "₸ $totalAmount"
+        budget.text = "₸ $budgetAmount"
+        expense.text = "₸ $expenseAmount"
     }
 
     private fun undoDelete() {
@@ -103,7 +104,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showSnakbar() {
         val view = findViewById<View>(R.id.coordinator)
-        val snackbar = Snackbar.make(view, "Trabsaction deleted!", Snackbar.LENGTH_LONG)
+        val snackbar = Snackbar.make(view, "Transaction deleted!", Snackbar.LENGTH_LONG)
         snackbar.setAction("Undo") {
             undoDelete()
         }

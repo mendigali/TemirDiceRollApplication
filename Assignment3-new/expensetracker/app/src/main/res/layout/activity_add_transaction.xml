@@ -31,14 +31,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:hint="Category"
+            android:hint="Title"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/labelInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/label_selector"
                 android:drawablePadding="12dp"
                 android:inputType="text"
                 android:maxLines="1" />
@@ -58,7 +57,6 @@
                 android:id="@+id/amountInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/money_selector"
                 android:drawablePadding="12dp"
                 android:inputType="numberDecimal|numberSigned"
                 android:maxLines="1" />
@@ -78,7 +76,6 @@
                 android:id="@+id/descriptionInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/description_selector"
                 android:drawablePadding="12dp"
                 android:inputType="text"
                 android:maxLines="1" />

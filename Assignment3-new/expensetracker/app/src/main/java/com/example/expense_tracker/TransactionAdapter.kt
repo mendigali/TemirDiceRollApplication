@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.math.abs
 
 class TransactionAdapter(private var transactions: List<Transaction>) :
     RecyclerView.Adapter<TransactionAdapter.TransactionHolder>() {
@@ -29,10 +30,10 @@ class TransactionAdapter(private var transactions: List<Transaction>) :
         val context = holder.amount.context
 
         if (transaction.amount >= 0) {
-            holder.amount.text = "+ $%.2f".format(transaction.amount)
+            holder.amount.text = "+ ₸${transaction.amount}"
             holder.amount.setTextColor(ContextCompat.getColor(context, R.color.green))
         } else {
-            holder.amount.text = "- $%.2f".format(Math.abs(transaction.amount))
+            holder.amount.text = "- ₸${abs(transaction.amount)}"
             holder.amount.setTextColor(ContextCompat.getColor(context, R.color.red))
         }
         holder.label.text = transaction.label
