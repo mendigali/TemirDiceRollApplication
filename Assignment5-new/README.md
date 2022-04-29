@@ -4,7 +4,7 @@
 
 - Group: SE 2017
 - Students:
-  - Temir Mendigali
+  - Aruzhan Uskembaeva
   - Naziya Baisakalova
 
 Used [OpenWeatherApi](https://openweathermap.org/api), Moshi, Retrofit
